@@ -1,10 +1,19 @@
+"use client"
+import { useChat } from 'ai/react';
 import React from 'react';
 
 const ChatComponent = () => {
+
+    const { input, handleInputChange, handleSubmit, isLoading, messages } = useChat();
+
     return (
         <div>
             <div className="">
                 <h3 className=''>Your AI assistant</h3>
+                <p>response</p>
+            </div>
+            <div className="">
+                <h3 className=''>User</h3>
                 <p>response</p>
             </div>
             <div className="">
@@ -15,6 +24,8 @@ const ChatComponent = () => {
                     <textarea
                         id="userMessage"
                         name="userMessage"
+                        value={input}
+                        onChange={handleInputChange}
                         className="border p-3 rounded-md focus:outline-none focus:border-blue-300 bg-gray-100"
                         placeholder="Write your question here..."
                     />
