@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ChatComponent from './components/ChatComponent'
+import ChatComponent from "../components/chatComponent"
 
 export default function Home() {
 
