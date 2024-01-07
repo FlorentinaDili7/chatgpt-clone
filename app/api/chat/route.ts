@@ -8,7 +8,9 @@ export const runtime = 'edge'; // Provide optimal infrastructure for our API rou
 const config = new Configuration({
 	apiKey: process.env.OPENAI_API_KEY
 });
+
 const openai = new OpenAIApi(config);
+console.log(openai, 'apiKey');
 
 // POST localhost:3000/api/chat
 export async function POST(request: NextRequest) {
